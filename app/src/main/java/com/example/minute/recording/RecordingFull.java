@@ -37,21 +37,21 @@ public class RecordingFull extends AppCompatActivity {
     private Button btnPlay;
     private MediaPlayer player = null;
 
-//    // Requesting permission to RECORD_AUDIO
-//    private boolean permissionToRecordAccepted = false;
-//    private String [] permissions = {Manifest.permission.RECORD_AUDIO};
-//
-//    @Override
-//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-//        switch (requestCode){
-//            case REQUEST_RECORD_AUDIO_PERMISSION:
-//                permissionToRecordAccepted  = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-//                break;
-//        }
-//        if (!permissionToRecordAccepted ) finish();
-//
-//    }
+    // Requesting permission to RECORD_AUDIO
+    private boolean permissionToRecordAccepted = false;
+    private String [] permissions = {Manifest.permission.RECORD_AUDIO};
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode){
+            case REQUEST_RECORD_AUDIO_PERMISSION:
+                permissionToRecordAccepted  = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                break;
+        }
+        if (!permissionToRecordAccepted ) finish();
+
+    }
 
     private void onRecord(boolean start) {
         if (start) {
@@ -165,7 +165,7 @@ public class RecordingFull extends AppCompatActivity {
         fileName = getExternalCacheDir().getAbsolutePath();
         fileName += "/audiorecordtest.3gp";
 
-//        ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
+        ActivityCompat.requestPermissions(this, permissions, REQUEST_RECORD_AUDIO_PERMISSION);
         Log.d(LOG_TAG, "3");
         LinearLayout ll = new LinearLayout(this);
         recordButton = new RecordButton(this);
