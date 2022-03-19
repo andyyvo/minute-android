@@ -22,4 +22,9 @@
         android:name="com.example.minute.ui.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
+    <activity
+        android:id="@+id/recordingFull"
+        android:name="com.example.minute.recording.RecordingFull"
+        android:label="activity_recording_full"
+        tools:layout="@layout/activity_recording_full" />
 </navigation>
