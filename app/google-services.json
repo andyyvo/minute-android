@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1026593178778",
+    "firebase_url": "https://minute-802a0-default-rtdb.firebaseio.com",
+    "project_id": "minute-802a0",
+    "storage_bucket": "minute-802a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026593178778:android:55ddadbe5f2cb555388b23",
+        "android_client_info": {
+          "package_name": "com.example.minute"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026593178778-m25rooc2u3n6suqovg3jn798bcpdasq0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCo4BJ3kMjtEScyaulaErdauvG-28Ns78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026593178778-m25rooc2u3n6suqovg3jn798bcpdasq0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1026593178778-bantsq6a8bhtvjd2p0v029j86nnpaopa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.minute"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
