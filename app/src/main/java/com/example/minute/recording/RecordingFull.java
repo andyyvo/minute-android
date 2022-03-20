@@ -16,8 +16,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.minute.R;
+import com.example.minute.recording.assemblyai.UploadAudio;
+
+import org.json.JSONException;
 
 import java.io.IOException;
 
@@ -36,6 +40,8 @@ public class RecordingFull extends AppCompatActivity {
     private PlayButton playButton = null;
     private Button btnPlay;
     private MediaPlayer player = null;
+
+    private TextView responseText;
 
     // Requesting permission to RECORD_AUDIO
     private boolean permissionToRecordAccepted = false;
@@ -198,6 +204,15 @@ public class RecordingFull extends AppCompatActivity {
             }
         });
         Log.d(LOG_TAG, "4");
+
+        responseText = (TextView) findViewById(R.id.responseText);
+        UploadAudio uploadAudio = new UploadAudio();
+        try {
+            responseText.setText(uploadAudio.uploadURL("https://bit.ly/3yxKEIY"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        responseText.setText("hello world.");
     }
 
     @Override
