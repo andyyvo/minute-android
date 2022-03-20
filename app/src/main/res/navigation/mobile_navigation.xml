@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.minute.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:id="@+id/navigation_learn"
+        android:name="com.example.minute.ui.learn.LearnFragment"
+        android:label="@string/title_learn"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
