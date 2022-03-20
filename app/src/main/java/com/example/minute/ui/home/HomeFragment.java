@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,7 +20,7 @@ import com.example.minute.recording.emptytest;
 
 public class HomeFragment extends Fragment {
 
-    private Button goToRecording;
+    private ImageButton goToRecording;
 
     private FragmentHomeBinding binding;
 
@@ -31,10 +32,10 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textHome;
+//        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
 
-        goToRecording = (Button) root.findViewById(R.id.goToRecording);
+        goToRecording = (ImageButton) root.findViewById(R.id.goToRecordingBtn);
         goToRecording.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

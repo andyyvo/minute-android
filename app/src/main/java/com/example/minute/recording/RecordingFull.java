@@ -205,7 +205,7 @@ public class RecordingFull extends AppCompatActivity {
         });
         Log.d(LOG_TAG, "4");
 
-        responseText = (TextView) findViewById(R.id.responseText);
+        responseText = (TextView) findViewById(R.id.tvSpeech);
         UploadAudio uploadAudio = new UploadAudio();
         try {
             responseText.setText(uploadAudio.uploadURL("https://bit.ly/3yxKEIY"));
