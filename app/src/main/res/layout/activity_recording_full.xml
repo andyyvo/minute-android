@@ -12,9 +12,9 @@
         android:layout_height="wrap_content"
         android:text="Record"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mockView2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/mockView2" />
 
     <Button
         android:id="@+id/btnPlay"
@@ -23,18 +23,33 @@
         android:text="Play"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mockView2"
+        app:layout_constraintTop_toTopOf="@+id/mockView2" />
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/mockView2"
+        android:layout_width="85dp"
+        android:layout_height="109dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.645" />
 
     <TextView
-        android:id="@+id/responseText"
-        android:layout_width="349dp"
-        android:layout_height="273dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/tvSpeech"
+        android:layout_width="317dp"
+        android:layout_height="424dp"
+        android:text="The text from AssemblyAi should output here"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintTop_toBottomOf="@+id/mockView3" />
+
+    <androidx.constraintlayout.utils.widget.MockView
+        android:id="@+id/mockView3"
+        android:layout_width="413dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
